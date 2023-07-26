@@ -1,29 +1,23 @@
 <script lang="ts" setup>
-// import { TwicImg } from '@twicpics/components/vue3'
 
 const props = defineProps<{
   name: string
+  sku: number
   brand: string
   price: number | null // some prices are null in our dataset
   rating: number
-  reviewsCount: number
+  reviewsCount: string | number
   imageUrl: string
 }>()
 
-const { name, brand, price, rating, reviewsCount, imageUrl } = toRefs(props)
+const { name, sku, brand, price, rating, reviewsCount, imageUrl } = toRefs(props)
 
 const formattedPrice = computed(() => Number.isNaN(price) ? '-' : price)
-
-const optimizedImageUrl = computed(() => imageUrl.value.replace('https://images-na.ssl-images-amazon.com/images/', '/product-images/'))
 </script>
 
 <template>
   <BaseCard class="product-card">
-    <TwicImg
-      :alt="name"
-      :src="optimizedImageUrl"
-      class="mb-5"
-    />
+    <img :src="imageUrl" :alt="name" class="mb-5"/>
     <div class="px-5 pb-5">
       <BaseTitle size="xs" class="mb-1 text-hot-pink-500 -900">
         {{ brand }}

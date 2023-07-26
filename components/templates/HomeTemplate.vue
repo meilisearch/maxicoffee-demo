@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const sortingOptions = [
   { value: 'products', label: 'Featured' },
-  { value: 'products:price:asc', label: 'Price: Low to High' },
-  { value: 'products:price:desc', label: 'Price: High to Low' },
-  { value: 'products:rating:desc', label: 'Rating: High to Low' }
+  { value: 'products:offers.price:asc', label: 'Price: Low to High' },
+  { value: 'products:offers.price:desc', label: 'Price: High to Low' },
+  { value: 'products:aggregateRating.ratingValue:desc', label: 'Rating: High to Low' }
 ]
 </script>
 
@@ -16,10 +16,9 @@ const sortingOptions = [
     </TheNavbar>
     <div class="container mb-5">
       <div class="filters">
-        <MeiliSearchFacetFilter attribute="category" class="mb-5" />
         <MeiliSearchFacetFilter attribute="brand" class="mb-5" />
-        <MeiliSearchRangeFilter attribute="price" class="mb-5" />
-        <MeiliSearchRatingFilter attribute="rating_rounded" label="Rating" />
+        <MeiliSearchRangeFilter attribute="offers.price" class="mb-5" />
+        <MeiliSearchRatingFilter attribute="aggregateRating.ratingValue" label="Rating" />
       </div>
       <div class="results">
         <div class="mb-5 results-meta">
