@@ -1,1 +1,1 @@
-self.importScripts('/server/index.mjs');
+self.importScripts('/maxicoffee-demo/server/index.mjs');
