@@ -1,5 +1,6 @@
 {
   "private": true,
+  "homepage": "https://meilisearch.github.io/maxicoffee-demo",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -10,7 +11,9 @@
     "storybook": "storybook dev -p 6006 --no-open",
     "build-storybook": "storybook build",
     "lint": "eslint .",
-    "setup": "node database/setup.js"
+    "setup": "node database/setup.js",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages --dotfiles -d .output/public"
   },
   "devDependencies": {
     "@babel/core": "^7.20.12",
@@ -29,6 +32,7 @@
     "babel-loader": "^8.3.0",
     "defu": "^6.1.2",
     "eslint": "^8.33.0",
+    "gh-pages": "^5.0.0",
     "instantsearch.css": "^8.0.0",
     "nuxt": "^3.1.0",
     "react": "^18.2.0",

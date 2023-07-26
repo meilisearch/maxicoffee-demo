@@ -66,7 +66,7 @@ TWICPICS_DOMAIN=https://meilisearch-ecommerce.twic.pics
 STORYBOOK_TWICPICS_DOMAIN=https://meilisearch-ecommerce.twic.pics
 ```
 
-> This application uses [TwicPics](https://twicpics.com/) to deliver optimized images. You don’t need to update the related environment variables. 
+> This application uses [TwicPics](https://twicpics.com/) to deliver optimized images. You don’t need to update the related environment variables.
 
 ### Database
 
@@ -103,6 +103,14 @@ yarn preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
+### Publish on Github Pages
+
+You can read more about what happens on [the Nuxt config file here](https://content.nuxtjs.org/guide/deploy/static-hosting).
+
+```bash
+yarn deploy
+```
+
 ## ✨ Storybook
 
 This project uses [Storybook v7](https://storybook.js.org/) to document components. The `vite.config.ts` is used by Storybook to enable auto-imports and path aliases.
@@ -114,4 +122,3 @@ yarn storybook
 ```
 
 > Output files `auto-imports.d.ts` and `components.d.ts` are auto-generated and *should not* be updated manually. You can commit them into source control.
-
