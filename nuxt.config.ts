@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: '/maxicoffee-demo/',
+    baseURL: '/',
     head: {
       title: 'Ecommerce demo - Meilisearch',
       meta: [
@@ -28,10 +28,10 @@ export default defineNuxtConfig({
       }
     }
   },
-  ssr: false,
-  nitro: {
-    preset: 'service-worker'
-  },
+  // ssr: false,
+  // nitro: {
+  //   preset: 'service-worker'
+  // },
   build: {
     transpile: [
       'vue-instantsearch'
